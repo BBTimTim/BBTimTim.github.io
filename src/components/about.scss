@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Comfortaa:wght@300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fustat:wght@200..800&family=Great+Vibes&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Matemasie&family=Noto+Sans+Kannada:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Offside&family=Petit+Formal+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Rubik+Glitch&display=swap");
+
+.about {
+  background: linear-gradient(180deg, #0a1229, #6f89a4);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  padding: 0 6rem 0 6rem;
+  z-index: -2;
+  align-items: center;
+  flex-direction: column;
+  gap: 9rem;
+
+  .skills {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    border-radius: 10px;
+    align-items: center;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    font-weight: 200;
+    letter-spacing: 3px;
+    padding: 7rem 0;
+    gap: 1em;
+
+    .skill {
+      hr {
+        height: 5px;
+        border-radius: 5px;
+        background-color: rgb(141, 221, 255);
+        border: none;
+      }
+    }
+
+    .skillBox {
+      background: transparent;
+      border-radius: 15px;
+      box-shadow: 8px 8px 60px 10px rgba(192, 236, 254, 0.6);
+      padding: 2rem;
+      overflow: hidden;
+      width: 80%;
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      span {
+        padding: 0 2rem;
+
+        img,
+        .icon {
+          width: 75px;
+          height: auto;
+          padding: 12px;
+          border-radius: 10px;
+
+          box-shadow: 0 6px 10px rgba(43, 51, 63, 0.744);
+          border-top: 1px solid rgba(221, 242, 255, 0.6);
+          border-bottom: 1px solid rgba(221, 242, 255, 0.6);
+        }
+
+        .mys {
+          width: 85px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+.aboutWrapper {
+  position: relative;
+  display: flex;
+  width: 80%;
+  height: 100%;
+  top: 12%;
+}
+
+.gradientWrapper {
+  margin: auto;
+  position: absolute;
+  padding: 2em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url("/colors3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content-glass {
+    width: 95%;
+    height: 90%;
+    background-color: rgba(184, 184, 184, 0.3);
+    backdrop-filter: blur(25px);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 3px 2px 3px rgba(43, 51, 63, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    border-radius: 15px;
+
+     .content-text2 {
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 3rem;
+   
+    p{
+         line-height: 22px;
+         text-indent: 15px;
+    }
+     
+     .motivation-title2{
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 400;
+        padding: 1rem 0.5rem;
+         font-weight: 200;
+    }
+    }
+
+    .motivation-title{
+        font-size: 2.8rem;
+        text-align: center;
+        font-weight: 200;
+        padding: 8px 0 0 0;
+
+    }
+  }
+
+  .motivation {
+    width: 40%;
+    height: 100%;
+    margin-left: 45px;
+    border-radius: 10px;
+  }
+
+  .content-text {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+
+    .text-box {
+      display: flex;
+      position: relative;
+      align-items: center;
+      gap: 2rem;
+      padding: 0 0 10px 0;
+      justify-content: center; 
+
+      .iconWrapper {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          position: absolute;
+          width: 75px;
+          height: auto;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -2;
+        }
+
+        .glass {
+          position: absolute;
+          border-radius: 10px;
+          width: 90px;
+          height: 90px;
+          overflow: hidden;
+          border-top: 1px solid rgba(255, 255, 255, 0.795);
+          border-left: 1px solid rgba(255, 255, 255, 0.7);
+          box-shadow:
+            inset 0 1px 2px rgba(255, 255, 255, 0.5),
+            0 5px 10px rgba(0, 0, 0, 0.3);
+
+          z-index: 1;
+        }
+
+        .glass::after {
+          content: "";
+          position: absolute;
+          bottom: 15%;
+          left: 0;
+          width: 190px;
+          height: 60px;
+
+          background: linear-gradient(
+            76deg,
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.3),
+            rgba(255, 255, 255, 0),
+            transparent
+          );
+          z-index: 8;
+          border-radius: 8px;
+          transform: rotate(-43deg);
+          transform-origin: center;
+        }
+      }
+
+      .textWrapper {
+        width: 90%;
+        height: 115px;
+        padding: 0 1rem;
+        text-indent: 8px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        h3{
+         margin-bottom: 5px;
+         font-size: 1.3rem;
+        }
+
+        p{
+            line-height: 22px;
+        }
+      }
+    }
+  }
+
+  h1 {
+    color: rgb(230, 243, 255);
+    font-size: 12rem;
+    font-family: "Matemasie", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    text-shadow: -3px 4px 1px rgba(255, 170, 248, 0.9);
+    left: -8%;
+    bottom: 55%;
+    transform: rotate(-10deg);
+    transform-origin: center;
+  }
+
+  p {
+    line-height: 18px;
+    color: white;
+  }
+}
+
+.gradientWrapper::after,
+.gradientWrapper::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    rgb(255, 255, 255),
+    rgb(0, 167, 250),
+    rgb(255, 255, 255),
+    rgb(0, 167, 250),
+    rgb(255, 255, 255)
+  );
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  padding: 3px;
+  border-radius: 15px;
+  animation: 5s spin linear infinite;
+}
+
+.gradientWrapper::before {
+  filter: blur(1.5rem);
+  opacity: 0.8;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}

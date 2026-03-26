@@ -1,0 +1,205 @@
+@import "../app.scss";
+
+.contact {
+  background: linear-gradient(180deg, #0a1229, #6f89a4);
+  width: 100%;
+  height: 100%;
+  padding: 8rem 0;
+
+  .upCont{
+  position: relative;
+  left: 20em;
+  top: 45em;
+ 
+
+}
+
+  .contactWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 70%;
+    height: 60vh;
+    margin: auto;
+    z-index: 1;
+
+    @include mobile {
+      display: inline;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .textContainer {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      @include mobile {
+        flex: 0.3;
+        padding: 15px;
+      }
+
+      .items {
+        font-size: 1.2rem;
+
+        @include mobile {
+          font-size: 0.8rem;
+          padding: 2px 0;
+        }
+      }
+
+      h1 {
+        font-size: 6rem;
+        font-weight: 200;
+        margin-top: 50px;
+        
+        @include mobile {
+          font-size: 1.5rem;
+          padding: 0 0 5px 0;
+        }
+      }
+
+      h2 {
+        font-size: 2rem;
+        text-align: left;
+        padding: 0 0 10px 0;
+        font-weight: 800;
+
+        @include mobile {
+          font-size: 1rem;
+          padding: 8px 0;
+        }
+      }
+    }
+
+    .formContainer {
+      flex: 0.7;
+      position: relative;
+
+      .phoneSvg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-15deg);
+        z-index: 0;
+        pointer-events: none;
+
+        svg {
+          transform: rotate(-15deg);
+          transform-origin: center;
+          width: 750px;
+          height: 750px;
+        }
+        @include mobile {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        padding:10rem 0 0 0;
+
+        input,
+        textarea {
+          padding: 20px;
+          background-color: transparent;
+          border: 1px solid #fff;
+          color: #fff;
+          border-radius: 5px;
+          margin: 10px 0;
+
+          @include mobile {
+            padding: 8px;
+            margin: 3px 0;
+          }
+        }
+
+        label {
+          margin-top: 25px;
+          text-indent: 10px;
+
+          @include mobile {
+            margin-top: 8px;
+          }
+        }
+
+        button {
+          margin: 2rem 0;
+          padding: 1rem;
+          font-weight: 800;
+          font-size: 1.2rem;
+          width: 100%;
+          color: rgb(255, 255, 255);
+          position: relative;
+          text-align: center;
+          text-decoration: none;
+          background: transparent;
+          border: rgb(254, 159, 234) 3px solid;
+          border-radius: 5px;
+          text-shadow:
+            0 0 0 0.125em rgba(255, 199, 244, 0.5),
+            0 0 0.125em rgb(255, 0, 170);
+          box-shadow:
+            inset 0 0 25px 0 rgba(255, 92, 231, 0.6),
+            0 0 25px 0 rgba(255, 92, 231, 0.6);
+
+          button::before {
+            content: " ";
+            position: absolute;
+            background: rgb(0, 255, 247);
+            top: 135%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: perspective(12px) rotateX(17deg) scale(1.6, 0.7);
+            filter: blur(15px);
+            opacity: 0.9;
+          }
+
+          @include mobile {
+            margin-top: 8px;
+            padding: 0.8rem;
+          }
+        }
+
+        button:hover {
+           background-color: rgba(241, 121, 201, 0.4);
+          cursor: pointer;
+        }
+        
+      }
+    }
+  }
+}
+
+.form-status {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.form-status.success {
+  background-color: rgba(76, 192, 80, 0.4);
+  border: 1px solid rgba(8, 45, 9, 0.4);
+  color: rgb(222, 254, 223);
+}
+
+.form-status.error {
+  background-color: rgba(254, 40, 40, 0.4);
+  border: 1px solid rgba(70, 0, 0, 0.4);
+  color: rgb(255, 207, 207);
+}
+
+.sending-text {
+  font-size: 22px;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+

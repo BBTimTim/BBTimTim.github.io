@@ -1,0 +1,100 @@
+@import "../app.scss";
+
+.main{
+     height: calc(100vh - 100px);
+     background: linear-gradient(180deg,  #0a1229, #6f89a4 );
+     overflow: hidden;
+     position: relative;
+
+
+      @include mobile{
+               height: 100vh;
+            }
+
+     .wrapper{
+        max-width: 60%;
+        height: 100%;
+        margin: auto;
+
+
+          @include mobile{
+               max-width: 90%;
+            }
+
+        .textContainer{
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+
+            @include mobile{
+               height: 100vh;
+               width: 100%;
+               gap: 20px;
+               align-items: center;
+               text-align: center;
+            }
+
+
+           h2.name{
+                font-size: 2.1rem;
+                color: #f8bef4;
+                letter-spacing: 10px;
+                font-weight: 300;
+                text-align: left;
+
+                   @include mobile{
+               font-size: 16px;
+            }
+            }
+
+           h1{
+            font-size: 7rem;
+            line-height: 9rem;
+            font-weight: 200;
+
+              @include mobile{
+               font-size: 30px;
+               line-height: 2.5rem;
+            }
+           }
+        }
+     }
+
+     .slidingTextContainer{
+        font-size: 50vh;
+        position: absolute;
+        bottom: -90px;
+        white-space: nowrap;
+        color: #cfe8ff10;
+        font-weight: bold;
+        
+          @include mobile{
+               bottom: 60px;
+                font-size: 20vh;
+            }
+
+     }
+    
+     .imageContainer{ 
+         height: 100%;
+         position: absolute;
+         bottom: 20%;
+         right: 5%;
+
+           @include mobile{
+            display: none;
+            }
+         
+
+        img{
+         width: 80em;
+         height: auto;
+         filter: drop-shadow(0 0 15px rgba(141, 158, 206, 0.7));
+
+        }
+     }
+}
+
