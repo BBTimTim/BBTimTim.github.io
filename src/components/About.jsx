@@ -9,7 +9,14 @@ import {
   FaLaravel,
   FaBootstrap,
 } from "react-icons/fa";
-import { SiVite, SiPhp, SiDocker } from "react-icons/si";
+import {
+  SiVite,
+  SiPhp,
+  SiDocker,
+  SiTailwindcss,
+  SiRedux,
+  SiClaude,
+} from "react-icons/si";
 
 export default function About() {
   return (
@@ -90,7 +97,7 @@ export default function About() {
               <div className="text-box">
                 <div className="iconWrapper">
                   <div className="glass"></div>
-                  <img src="art.png" alt="art" />
+                  <img src="/art.png" alt="art" />
                 </div>
                 <div className="textWrapper">
                   <h3>Kreativitás</h3>
@@ -133,6 +140,9 @@ export default function About() {
               <FaReact className="icon" />
             </span>
             <span>
+              <SiRedux className="icon" />
+            </span>
+            <span>
               <SiPhp className="icon" />
             </span>
             <span>
@@ -142,19 +152,25 @@ export default function About() {
               <FaBootstrap className="icon" />
             </span>
             <span>
+              <SiTailwindcss className="icon" />
+            </span>
+            <span>
               <SiDocker className="icon" />
             </span>
             <span>
-              <img src="/mys.png" className="mys" />
+              <img src="/mys.png" className="mys" alt="MySQL" />
             </span>
             <span>
-              <img src="/ai.png" />
+              <SiClaude className="icon" />
             </span>
             <span>
-              <img src="/id.png" />
+              <img src="/ai.png" alt="Adobe Illustrator" />
             </span>
             <span>
-              <img src="/ps.png" />
+              <img src="/id.png" alt="Adobe InDesign" />
+            </span>
+            <span>
+              <img src="/ps.png" alt="Adobe Photoshop" />
             </span>
           </div>
         </div>

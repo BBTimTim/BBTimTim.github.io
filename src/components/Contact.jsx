@@ -62,7 +62,7 @@ export default function Contact() {
         email: "",
         message: "",
       });
-    } catch (e) {
+    } catch {
       setFormStatus({
         submitting: false,
         success: false,
@@ -87,7 +87,7 @@ export default function Contact() {
     },
   };
   return (
-    <div className="contact">
+    <div id="contact" className="contact">
       <motion.div
         ref={ref}
         variants={variants}
@@ -164,7 +164,9 @@ export default function Contact() {
             )}
             <label htmlFor="name">Név</label>
             <input
+              id="name"
               name="name"
+              value={formData.name}
               type="text"
               required
               placeholder="Név"
@@ -172,7 +174,9 @@ export default function Contact() {
             />
             <label htmlFor="email">Email</label>
             <input
+              id="email"
               name="email"
+              value={formData.email}
               type="email"
               required
               placeholder="Email"
@@ -180,7 +184,9 @@ export default function Contact() {
             />
             <label htmlFor="message">Üzenet</label>
             <textarea
+              id="message"
               name="message"
+              value={formData.message}
               rows={8}
               placeholder="Üzenet"
               onChange={handleInputChange}
@@ -194,12 +200,12 @@ export default function Contact() {
             </button>
           </motion.form>
         </motion.div>
-        <div className="upCont">
-          <a href="#homepage">
-            <HiArrowUp size={40} color="#fecced" />{" "}
-          </a>
-        </div>
       </motion.div>
+      <div className="upCont">
+        <a href="#homepage" aria-label="Vissza az oldal tetejére">
+          <HiArrowUp size={30} color="#fecced" />
+        </a>
+      </div>
     </div>
   );
 }

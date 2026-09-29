@@ -1,30 +1,62 @@
+@use '/src/mixins.scss' as *;
 @import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Comfortaa:wght@300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fustat:wght@200..800&family=Great+Vibes&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Matemasie&family=Noto+Sans+Kannada:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Offside&family=Petit+Formal+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Rubik+Glitch&display=swap");
 
 .about {
   background: linear-gradient(180deg, #0a1229, #6f89a4);
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
-  position: absolute;
-  padding: 0 6rem 0 6rem;
+  position: relative;
+  padding: 110px 25px 60px;
   z-index: -2;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  gap: 9rem;
+  gap: 80px;
+
+  @include desktop {
+    max-width: 100%;
+    padding: 70px 20px 40px;
+    gap: 30px;
+  }
+
+  @include tablet {
+    padding: 50px 20px 40px;
+  }
+
+  @include mobile {
+    padding: 30px 10px;
+  }
 
   .skills {
     position: relative;
-    width: 100%;
-    height: 60%;
     border-radius: 10px;
     align-items: center;
-    font-size: 3rem;
+    font-size: 40px;
     display: flex;
     flex-direction: column;
     font-weight: 200;
     letter-spacing: 3px;
-    padding: 7rem 0;
-    gap: 1em;
+    padding: 50px 0;
+    gap: 45px;
+
+    @include desktop {
+      padding: 20px 0;
+      gap: 10px;
+      font-size: 30px;
+    }
+
+    @include tablet {
+      padding: 10px 0;
+      gap: 5px;
+      font-size: 22px;
+    }
+
+     @include mobile {
+      padding: 10px 0;
+      gap: 5px;
+      font-size: 18px;
+    }
 
     .skill {
       hr {
@@ -32,6 +64,10 @@
         border-radius: 5px;
         background-color: rgb(141, 221, 255);
         border: none;
+
+          @include mobile {
+       height: 2px;
+    }
       }
     }
 
@@ -39,18 +75,42 @@
       background: transparent;
       border-radius: 15px;
       box-shadow: 8px 8px 60px 10px rgba(192, 236, 254, 0.6);
-      padding: 2rem;
-      overflow: hidden;
-      width: 80%;
+      padding: 25px;
+
+      @include desktop {
+        padding: 15px;
+      }
+
+      @include tablet {
+        padding: 10px 15px;
+      }
+
+        @include mobile {
+        padding: 5px 10px;
+      }
 
       .wrapper {
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        @include tablet {
+          gap: 10px;
+        }
+
+         @include mobile {
+          gap: 5px;
+        }
       }
 
       span {
-        padding: 0 2rem;
+        padding: 0 8px;
+
+        @include desktop {
+          padding: 0;
+        }
 
         img,
         .icon {
@@ -59,14 +119,43 @@
           padding: 12px;
           border-radius: 10px;
 
+          @include desktop {
+            width: 55px;
+            height: auto;
+          }
+
+          @include tablet {
+            width: 45px;
+            height: auto;
+          }
+
+            @include mobile {
+            width: 25px;
+            height: auto;
+            padding: 4px;
+          }
+
           box-shadow: 0 6px 10px rgba(43, 51, 63, 0.744);
           border-top: 1px solid rgba(221, 242, 255, 0.6);
           border-bottom: 1px solid rgba(221, 242, 255, 0.6);
         }
 
+        // a MySQL logó fekvő, ezért szélesebb, mint a többi ikon
         .mys {
-          width: 85px;
+          width: 80px;
           height: auto;
+
+          @include desktop {
+            width: 65px;
+          }
+
+          @include tablet {
+            width: 55px;
+          }
+
+          @include mobile {
+            width: 40px;
+          }
         }
       }
     }
@@ -77,19 +166,23 @@
   position: relative;
   display: flex;
   width: 80%;
-  height: 100%;
-  top: 12%;
+
+  @include desktop {
+    width: 100%;
+  }
 }
 
 .gradientWrapper {
   margin: auto;
   position: absolute;
-  padding: 2em;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   border-radius: 10px;
+
+  @include desktop {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .content {
@@ -106,9 +199,19 @@
   justify-content: center;
   align-items: center;
 
-  .content-glass {
-    width: 95%;
+  @include desktop {
+    width: 100%;
     height: 90%;
+  }
+
+  @include tablet {
+    width: 100%;
+    height: 100%;
+  }
+
+  .content-glass {
+    width: 100%;
+    height: 100%;
     background-color: rgba(184, 184, 184, 0.3);
     backdrop-filter: blur(25px);
     border-top: 1px solid rgba(255, 255, 255, 0.4);
@@ -117,39 +220,101 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem;
+    padding: 40px;
     border-radius: 15px;
 
-     .content-text2 {
-    width: 80%;
-    height: 100%;
-    border-radius: 10px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 1.2rem;
-    padding: 3rem;
-   
-    p{
-         line-height: 22px;
-         text-indent: 15px;
+    @include tablet {
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 30px 25px;
     }
-     
-     .motivation-title2{
-        font-size: 3rem;
+
+    @include mobile {
+      padding: 10px 8px;
+    }
+
+    .content-text2 {
+      width: 70%;
+      height: 100%;
+      border-radius: 10px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 20px;
+      padding: 95px 15px 0 0;
+
+      @include desktop {
+        gap: 0px;
+        width: 60%;
+        padding: 35px 0 0 0;
+      }
+
+      @include tablet {
+        gap: 8px;
+        width: 100%;
+        height: auto;
+        padding: 5px;
+      }
+
+      p {
+        line-height: 22px;
+        text-indent: 15px;
+
+        @include desktop {
+          line-height: 18px;
+          text-indent: 10px;
+        }
+
+          @include mobile {
+          line-height: normal;
+        }
+      }
+
+      .motivation-title2 {
+        font-size: 45px;
         text-align: center;
         font-weight: 400;
-        padding: 1rem 0.5rem;
-         font-weight: 200;
-    }
-    }
-
-    .motivation-title{
-        font-size: 2.8rem;
-        text-align: center;
+        padding: 20px 10px;
         font-weight: 200;
-        padding: 8px 0 0 0;
 
+        @include desktop {
+          font-size: 25px;
+          padding: 20px 0px;
+        }
+
+        @include tablet {
+          font-size: 22px;
+          padding: 10px 0px;
+        }
+
+          @include mobile {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .motivation-title {
+      font-size: 45px;
+      text-align: center;
+      font-weight: 200;
+      padding: 15px 0 0 0;
+
+      @include desktop {
+        font-size: 25px;
+        padding: 0;
+      }
+
+      @include tablet {
+        font-size: 22px;
+        padding: 0 0 10px 0;
+      }
+
+      @include mobile {
+        font-size: 20px;
+      }
     }
   }
 
@@ -158,6 +323,16 @@
     height: 100%;
     margin-left: 45px;
     border-radius: 10px;
+
+    @include desktop {
+      margin-left: 40px;
+    }
+
+    @include tablet {
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+    }
   }
 
   .content-text {
@@ -167,15 +342,32 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1.2rem;
+    gap: 20px;
+
+    @include desktop {
+      gap: 1px;
+    }
+
+    @include tablet {
+      gap: 0;
+    }
 
     .text-box {
       display: flex;
       position: relative;
       align-items: center;
-      gap: 2rem;
+      gap: 25px;
       padding: 0 0 10px 0;
-      justify-content: center; 
+      justify-content: center;
+
+      @include desktop {
+        gap: 8px;
+      }
+
+      @include tablet {
+        gap: 5px;
+      }
+
 
       .iconWrapper {
         position: relative;
@@ -185,21 +377,49 @@
         align-items: center;
         justify-content: center;
 
+        @include desktop {
+          width: 50px;
+          height: 50px;
+        }
+
+        @include tablet {
+          width: 40px;
+          height: 40px;
+        }
+
+        @include mobile {
+          width: 30px;
+          height: 30px;
+        }
+
         img {
           position: absolute;
-          width: 75px;
+          width: 65px;
           height: auto;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
           z-index: -2;
+
+          @include desktop {
+            width: 45px;
+          }
+
+          @include tablet {
+            width: 40px;
+          }
+
+           @include tablet {
+            width: 30px;
+          }
         }
 
         .glass {
           position: absolute;
           border-radius: 10px;
-          width: 90px;
-          height: 90px;
+          width: 80px;
+          height: 80px;
+          padding: 0 0 0 0;
           overflow: hidden;
           border-top: 1px solid rgba(255, 255, 255, 0.795);
           border-left: 1px solid rgba(255, 255, 255, 0.7);
@@ -208,6 +428,21 @@
             0 5px 10px rgba(0, 0, 0, 0.3);
 
           z-index: 1;
+
+          @include desktop {
+            width: 60px;
+            height: 60px;
+          }
+
+          @include tablet {
+            width: 50px;
+            height: 50px;
+          }
+
+             @include mobile {
+          width: 40px;
+          height: 40px;
+        }
         }
 
         .glass::after {
@@ -234,20 +469,60 @@
 
       .textWrapper {
         width: 90%;
-        height: 115px;
-        padding: 0 1rem;
+        min-height: 100px;
+        padding: 0 25px;
         text-indent: 8px;
         display: flex;
         justify-content: center;
         flex-direction: column;
 
-        h3{
-         margin-bottom: 5px;
-         font-size: 1.3rem;
+        @include desktop {
+          min-height: 105px;
+          padding: 10px 0 0 15px;
         }
 
-        p{
-            line-height: 22px;
+        @include tablet {
+          min-height: 100px;
+          padding: 10px 0 0 15px;
+        }
+
+         @include mobile {
+          min-height: 85px;
+          padding: 10px 0 0 10px;
+        }
+
+
+        h3 {
+          margin-bottom: 5px;
+          font-size: 18px;
+
+          @include tablet {
+            font-size: 14px;
+          }
+
+           @include mobile {
+            font-size: 12px;
+             margin-bottom: 2px;
+          }
+        }
+
+        p {
+          line-height: 22px;
+          font-size: 14px;
+
+          @include desktop {
+            line-height: 18px;
+            text-indent: 10px;
+          }
+
+          @include tablet {
+            line-height: normal;
+            font-size: 12px;
+          }
+
+            @include mobile {
+            font-size: 11px;
+          }
         }
       }
     }
@@ -255,21 +530,52 @@
 
   h1 {
     color: rgb(230, 243, 255);
-    font-size: 12rem;
+    font-size: 180px;
     font-family: "Matemasie", sans-serif;
     font-weight: 400;
     font-style: normal;
     position: relative;
     text-shadow: -3px 4px 1px rgba(255, 170, 248, 0.9);
+    // A kártya bal felső sarkára lóg rá. Pixeles eltolás, mert a szekció
+    // magassága a tartalomhoz igazodik, így a százalékos bottom nem működne.
+    align-self: flex-start;
     left: -8%;
-    bottom: 55%;
+    top: -110px;
     transform: rotate(-10deg);
     transform-origin: center;
+
+    @include desktop {
+      font-size: 90px;
+      left: -5%;
+      top: -65px;
+    }
+
+    @include tablet {
+      position: absolute;
+      font-size: 45px;
+      top: -30px;
+      left: -15px;
+      bottom: auto;
+    }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   p {
     line-height: 18px;
     color: white;
+    font-size: 14px;
+
+    @include tablet {
+      line-height: normal;
+      font-size: 12px;
+    }
+
+     @include mobile {
+      font-size: 10px;
+    }
   }
 }
 

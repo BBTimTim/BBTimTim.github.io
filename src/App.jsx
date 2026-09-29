@@ -1,22 +1,19 @@
+import React from "react";
+import Navbar from "./components/Navbar.jsx";
+import Main from "./components/Main.jsx";
+import Portfolio from "./components/Portfolio.jsx";
+import Contact from "./components/Contact.jsx";
+import About from "./components/About.jsx";
 import "./app.scss";
-import Navbar from "./components/Navbar";
-import Main from "./components/Main";
-import About from "./components/About";
-import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact";
 
-function App() {
+export default function App() {
   return (
-    <>
-          <section className="homepage" id="homepage">
-          <Navbar />
-          <Main id="main" />
-          </section>
-           <section id="about"><About /></section>
-          <section id="portfolio"> <Portfolio/> </section>
-          <section id="contact"> <Contact/> </section>
-    </>
+    <div className="App" id="homepage">
+      <Navbar id="navbar" />
+      <Main id="main" />
+       <About id="about"  />
+      <Portfolio id="portfolio" />
+      <Contact id="contact" />
+    </div>
   );
 }
-
-export default App;

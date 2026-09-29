@@ -1,100 +1,153 @@
-@import "../app.scss";
+@use '../mixins' as *;
+@import '../app.scss';
+@import './about.scss';
+@import './portfolio.scss';
 
-.main{
-     height: calc(100vh - 100px);
-     background: linear-gradient(180deg,  #0a1229, #6f89a4 );
-     overflow: hidden;
-     position: relative;
+.main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 13%;
+  background: linear-gradient(180deg, #6f89a4, #0a1229);
+  overflow: hidden;
+
+  @include desktop {
+    padding-left: 10.5%;
+  }
 
 
-      @include mobile{
-               height: 100vh;
-            }
+  .textContainer {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;               
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #fff;
 
-     .wrapper{
-        max-width: 60%;
+    h2.name {
+      font-size: 1.4rem;
+      letter-spacing: 10px;
+      font-weight: 300;
+      color: #f8bef4;
+      text-align: left;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 200;
+      line-height: 1.2;
+    }
+
+    img {
+      width: 50px;
+      margin-top: 2rem;
+      animation: bounce 2s infinite;
+    }
+  }
+
+  .imageContainer {
+    position: absolute;
+    right: 4%;
+    bottom: -1%;
+    max-width: 1100px;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 0 25px rgba(141, 158, 206, 0.6));
+    }
+
+    // Kisebb képernyőn a kép magasságához igazítunk, hogy ne vágódjon le a teteje
+    @include desktop {
+      height: 92%;
+
+      .imageFrame {
         height: 100%;
-        margin: auto;
+      }
 
+      img {
+        display: block;
+        width: auto;
+        height: 100%;
+      }
+    }
 
-          @include mobile{
-               max-width: 90%;
-            }
+    @include tablet {
+      height: 62%;
+    }
 
-        .textContainer{
-            width: 70%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 30px;
+    // Mobilon a fotó a szöveg alatt, a középtől kicsit jobbra jelenik meg
+    @include mobile {
+      left: 50%;
+      right: auto;
+      transform: translateX(-40%);
+      height: 64%;
+    }
+  }
 
-            @include mobile{
-               height: 100vh;
-               width: 100%;
-               gap: 20px;
-               align-items: center;
-               text-align: center;
-            }
+  .slidingTextContainer {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    white-space: nowrap;
+    font-size: 15vw;
+    font-weight: bold;
+    color: rgba(207, 232, 255, 0.1);
+    pointer-events: none; 
 
-
-           h2.name{
-                font-size: 2.1rem;
-                color: #f8bef4;
-                letter-spacing: 10px;
-                font-weight: 300;
-                text-align: left;
-
-                   @include mobile{
-               font-size: 16px;
-            }
-            }
-
-           h1{
-            font-size: 7rem;
-            line-height: 9rem;
-            font-weight: 200;
-
-              @include mobile{
-               font-size: 30px;
-               line-height: 2.5rem;
-            }
-           }
-        }
+     @include mobile {
+      bottom: 0px;
      }
+  }
 
-     .slidingTextContainer{
-        font-size: 50vh;
-        position: absolute;
-        bottom: -90px;
-        white-space: nowrap;
-        color: #cfe8ff10;
-        font-weight: bold;
-        
-          @include mobile{
-               bottom: 60px;
-                font-size: 20vh;
-            }
 
-     }
-    
-     .imageContainer{ 
-         height: 100%;
-         position: absolute;
-         bottom: 20%;
-         right: 5%;
+  @include tablet {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 10vh;
+    padding-left: 0;
 
-           @include mobile{
-            display: none;
-            }
-         
+    .textContainer {
+      margin: 0 5%;
+      gap: 20px;
 
-        img{
-         width: 80em;
-         height: auto;
-         filter: drop-shadow(0 0 15px rgba(141, 158, 206, 0.7));
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
 
-        }
-     }
+  @include mobile {
+    align-items: flex-start;
+    padding-top: 5vh;
+
+    .textContainer {
+      margin: 0 5%;
+      text-align: left;   
+      max-width: 80%;
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2.name {
+        font-size: 1rem;
+      }
+    }
+
+    .slidingTextContainer {
+      font-size: 50vw;
+    }
+  }
 }
 
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(15px); }
+}

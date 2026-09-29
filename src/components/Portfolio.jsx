@@ -45,28 +45,32 @@ export default function Portfolio() {
               variants={{ fadeInUp }}
               whileHover={{ y: -10, transition: { duration: 0.2 } }}
             >
-              <motion.div className="project-image" 
-                          style={{backgroundImage: "url('/todo2.png')"}}
+              <motion.div className="project-image"
+                          style={{backgroundImage: "url('/pizza.png')", backgroundPosition: "center top"}}
                           whileHover={{ scale: 1.02,
                                         transition: {duration: 0.2}
                                       }}
                             >
                                  </motion.div>
-                                 
-                 <div className="title-logo">  
-                        <h3>Todo App</h3>
-                         <a href="https://github.com/BBTimTim/Php-todo-app/tree/main/todo" target='_blank'><SiGithub className="icon2" /></a>
+
+                 <div className="title-logo">
+                        <h3>One More Slice – Pizzarendelő App</h3>
+                         <a href="https://github.com/BBTimTim/Pizza-ordering-app" target='_blank' rel="noopener noreferrer" aria-label="GitHub"><SiGithub className="icon2" /></a>
                 </div>
                 <p>
-                 Todo webalkalmazás PHP (MySQL) backenddel és Bootstrap frontenddel, 
-                 Docker környezetben, ahol a felhasználók létrehozhatnak, módosíthatnak 
-                 és törölhetnek feladatokat, valamint egyszerűen kezelhetik a határidőket és státuszokat.
+                 Vizsgamunkaként készült pizzarendelő webáruház Laravel backenddel és React + Redux Toolkit + Tailwind frontenddel.
+                 Kosár, Stripe tesztfizetés, nyitvatartás-kezelés és admin felület.
+                 Dockerben fut, GitHub Actions CI/CD-vel. A fejlesztésben Claude Code segített.
                 </p>
                 <div className="project-tech">
-                  <span>PHP</span>
-                  <span>Docker</span>
-                  <span>Bootstrap</span>
+                  <span>React</span>
+                  <span>Redux Toolkit</span>
+                  <span>Tailwind</span>
+                  <span>Laravel</span>
                   <span>MySQL</span>
+                  <span>Docker</span>
+                  <span>CI/CD</span>
+                  <span>Claude</span>
                 </div>
               </motion.div>
           </motion.div>
@@ -89,7 +93,7 @@ export default function Portfolio() {
                              </motion.div>
                                   <div className="title-logo"> 
                                      <h3>Esküvőszervező App Időpontfoglalással</h3>
-                                    <a href="https://github.com/BBTimTim/laravel-react-reservation" target='_blank'><SiGithub className="icon2" /></a>
+                                    <span><a href="https://github.com/BBTimTim/laravel-react-reservation" target='_blank' rel="noopener noreferrer" aria-label="GitHub"><SiGithub className="icon2" /></a></span>
                                   </div>
                                 <p>
                                 Esküvőszervező és időpontfoglaló webalkalmazás.
@@ -129,7 +133,7 @@ export default function Portfolio() {
                      > </motion.div>
                  <div className="title-logo"> 
                      <h3>Időjárás App </h3> 
-                     <a href="https://github.com/BBTimTim/Weather-App" target='_blank'><SiGithub className="icon2" /></a>
+                     <a href="https://github.com/BBTimTim/Weather-App" target='_blank' rel="noopener noreferrer" aria-label="GitHub"><SiGithub className="icon2" /></a>
                 </div>
                 <p>
                 Időjárás alkalmazás Laravel backenddel és React frontenddel, 
